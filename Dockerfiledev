@@ -1,0 +1,19 @@
+# Development Dockerfile with hot-reload
+FROM python:3.11-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    FLASK_APP=main.py \
+    FLASK_ENV=development
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+# Run with Flask development server for hot-reload
+CMD ["python", "main.py"]

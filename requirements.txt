@@ -1,0 +1,23 @@
+# Web Framework
+Flask==3.0.0
+flask-cors==4.0.0
+
+# Production WSGI Server
+gunicorn==21.2.0
+
+# Weather API
+openmeteo-requests==1.1.0
+requests-cache==1.2.1
+retry-requests==2.0.0
+
+# Data Processing
+pandas==2.3.3
+numpy==2.3.5
+pytz==2025.2
+python-dateutil>=2.8.2
+
+# Environment
+python-dotenv==1.0.0
+
+# Debugging
+debugpy==1.8.0
