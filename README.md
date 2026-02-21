@@ -161,6 +161,4 @@ curl "http://127.0.0.1:5000/api/weather?latitude=40.7128&longitude=-74.0060"
 
 docker run -d --name weather-test -p 5001:5000 weather-tracker-api:test && sleep 5 && curl -s "http://127.0.0.1:5001/api/weather/current?latitude=40.7128&longitude=-74.0060" | python3 -m json.tool | head -15
 
-
-
-can 
+docker exec weather-test cat /app/open_metro_client.py | grep -A 2 -B 2 "strftime"
